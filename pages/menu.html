@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Taller del Sabor - Menú</title>
+  
+  <!-- Icono y estilos de Bootstrap -->
+  <link rel="icon" type="image/png" href="../img/branding/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  
+</head>
+<body id="cuerpoPagina">
+
+  <!-- Barra de navegación principal -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="../index.html">
+        <img src="../img/branding/logo.jpg" width="35" height="35" class="rounded-circle me-2" alt="Logo"> El Taller del Sabor
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="promociones.html">Promociones</a></li>
+          <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedido</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="btnModoOscuro" class="btn btn-outline-warning btn-sm mt-2 mt-lg-0">Modo Oscuro</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado de la sección -->
+  <header class="bg-dark text-white py-4 mb-4 border-bottom border-warning text-center">
+    <div class="container">
+      <h1 class="text-warning">Nuestro Menú Completo</h1>
+      <p class="mb-0">Explora nuestras opciones artesanales preparadas al instante.</p>
+    </div>
+  </header>
+
+  <!-- Contenido principal con las categorías del menú -->
+  <main class="container my-4">
+
+    <!-- Categoría 1: Hamburguesas -->
+    <section class="mb-5">
+      <h2 class="h4 text-warning border-bottom border-secondary pb-2 mb-3">1. Hamburguesas Artesanales</h2>
+      <div class="row g-3">
+        
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/productos/clasica-taller.jpg" class="card-img-top" alt="Clásica Taller">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Clásica Taller - $18.000</h3>
+                <p class="card-text small">150g de carne de res, queso cheddar, lechuga, tomate y salsa de la casa.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/productos/taller-bbq-bacon.jpg" class="card-img-top" alt="Taller BBQ Bacon">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Taller BBQ Bacon - $24.000</h3>
+                <p class="card-text small">150g de carne, tocineta crujiente, queso cheddar, cebolla caramelizada y salsa BBQ.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/productos/crispy-chicken.jpg" class="card-img-top" alt="Crispy Chicken">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Crispy Chicken - $21.000</h3>
+                <p class="card-text small">Pechuga de pollo apanada, ensalada coleslaw, pepinillos y mayonesa de ajo.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/productos/veggie-mushroom.jpg" class="card-img-top" alt="Veggie Mushroom">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Veggie Mushroom - $22.000</h3>
+                <p class="card-text small">Medallón de lentejas y garbanzos, portobello salteado, queso mozzarella y rúgula.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/productos/la-brutal-taller.jpg" class="card-img-top" alt="La Brutal Taller">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">La Brutal Taller - $28.000</h3>
+                <p class="card-text small">Doble carne de 150g, doble queso cheddar, tocineta, huevo frito y aros de cebolla.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Categoría 2: Acompañamientos -->
+    <section class="mb-5">
+      <h2 class="h4 text-warning border-bottom border-secondary pb-2 mb-3">2. Acompañamientos</h2>
+      <div class="row g-3">
+        
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/acompanamientos/papas-rusticas.jpg" class="card-img-top" alt="Papas Rústicas">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Papas Rústicas - $12.000</h3>
+                <p class="card-text small">Papas corte grueso sazonadas con paprika y romero.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/acompanamientos/aros-de-cebolla.jpg" class="card-img-top" alt="Aros de Cebolla">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Aros de Cebolla - $10.000</h3>
+                <p class="card-text small">Cebollas crujientes acompañadas de salsa tártara.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/acompanamientos/nachos-supremos.jpg" class="card-img-top" alt="Nachos Supremos">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Nachos Supremos - $15.000</h3>
+                <p class="card-text small">Nachos con queso cheddar derretido, guacamole y pico de gallo.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/acompanamientos/papas-bacon-cheese.jpg" class="card-img-top" alt="Papas Bacon & Cheese">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Papas Bacon & Cheese - $14.000</h3>
+                <p class="card-text small">Papas rústicas bañadas en salsa de queso y bits de tocineta.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/acompanamientos/yucas-fritas.jpg" class="card-img-top" alt="Yucas Fritas">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Yucas Fritas - $11.000</h3>
+                <p class="card-text small">Bastones de yuca crocantes con suero costeño.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Categoría 3: Bebidas -->
+    <section class="mb-5">
+      <h2 class="h4 text-warning border-bottom border-secondary pb-2 mb-3">3. Bebidas</h2>
+      <div class="row g-3">
+        
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/bebidas/gaseosa-personal.jpg" class="card-img-top" alt="Gaseosa Personal">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Gaseosa Personal - $5.000</h3>
+                <p class="card-text small">Coca-Cola, Sprite o Cuatro de 400ml.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/bebidas/limonada-cerezada.jpg" class="card-img-top" alt="Limonada Cerezada">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Limonada Cerezada - $8.000</h3>
+                <p class="card-text small">Limonada natural frutada con jarabe de cereza.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/bebidas/cerveza-artesanal.jpg" class="card-img-top" alt="Cerveza Artesanal">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Cerveza Artesanal - $10.000</h3>
+                <p class="card-text small">Cerveza Rubia o Negra hecha en la casa.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/bebidas/te-helado.jpg" class="card-img-top" alt="Té Helado de Durazno">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Té Helado de Durazno - $7.000</h3>
+                <p class="card-text small">Té negro frío infusionado con fruta natural.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/bebidas/agua-embotellada.jpg" class="card-img-top" alt="Agua Embotellada">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Agua Embotellada - $4.000</h3>
+                <p class="card-text small">Agua brisa con o sin gas de 600ml.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Categoría 4: Postres -->
+    <section class="mb-5">
+      <h2 class="h4 text-warning border-bottom border-secondary pb-2 mb-3">4. Postres</h2>
+      <div class="row g-3">
+        
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/postres/malteada-chocolate.jpg" class="card-img-top" alt="Malteada de Chocolate">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Malteada de Chocolate - $12.000</h3>
+                <p class="card-text small">Cremosa malteada espesa con crema batida y chispas de chocolate.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/postres/brownie-supremo.jpg" class="card-img-top" alt="Brownie Supremo">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Brownie Supremo - $11.000</h3>
+                <p class="card-text small">Brownie tibio con bola de helado de vainilla y fudge de chocolate.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/postres/cheesecake-frutos-rojos.jpg" class="card-img-top" alt="Cheesecake de Frutos Rojos">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Cheesecake de Frutos Rojos - $13.000</h3>
+                <p class="card-text small">Tarta de queso horneada con mermelada casera de moras y fresas.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/postres/churros-arequipe.jpg" class="card-img-top" alt="Churros con Arequipe">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Churros con Arequipe - $10.000</h3>
+                <p class="card-text small">Porción de 5 churros espolvoreados con azúcar y canela.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/postres/copa-helado.jpg" class="card-img-top" alt="Copa de Helado">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Copa de Helado - $8.000</h3>
+                <p class="card-text small">2 bolas de helado a elección (Vainilla, Chocolate, Fresa).</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Categoría 5: Menú Infantil -->
+    <section class="mb-5">
+      <h2 class="h4 text-warning border-bottom border-secondary pb-2 mb-3">5. Menú Infantil</h2>
+      <div class="row g-3">
+        
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/infantil/mini-burger-kids.jpg" class="card-img-top" alt="Mini Burger Kids">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Mini Burger Kids - $15.000</h3>
+                <p class="card-text small">Hamburguesa simple de 90g con queso, papas sonrientes y juguito.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/infantil/nuggets-pollo.jpg" class="card-img-top" alt="Nuggets de Pollo">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Nuggets de Pollo - $14.000</h3>
+                <p class="card-text small">6 nuggets crujientes con papas francesas y salsa miel mostaza.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/infantil/mini-hot-dog.jpg" class="card-img-top" alt="Mini Hot Dog Kids">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Mini Hot Dog Kids - $13.000</h3>
+                <p class="card-text small">Perro caliente pequeño con papas ripio, queso y salsa de tomate.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/infantil/salchipapa-infantil.jpg" class="card-img-top" alt="Salchipapa Infantil">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Salchipapa Infantil - $12.000</h3>
+                <p class="card-text small">Papas fritas con salchicha manguera y salsa rosada.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 border-secondary overflow-hidden">
+            <img src="../img/infantil/deditos-queso.jpg" class="card-img-top" alt="Deditos de Queso">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h6 card-title fw-bold">Deditos de Queso (4u) - $11.000</h3>
+                <p class="card-text small">Deditos horneados rellenos de queso mozzarella fundido.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Botón de acción para ir a pedidos -->
+    <div class="text-center mt-4">
+      <a href="pedidos.html" class="btn btn-warning btn-lg fw-bold">Ir a Pedir Ahora</a>
+    </div>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center py-3 mt-5 border-top border-warning">
+    <div class="container">
+      <p class="mb-0">El Taller del Sabor &copy; 2026 - Proyecto Front-End</p>
+    </div>
+  </footer>
+
+  <!-- Scripts de Bootstrap y archivo personalizado -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Taller del Sabor / Index</title>
+  
+  <link rel="icon" type="image/png" href="img/branding/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="cuerpoPagina">
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="index.html">
+        <img src="img/branding/logo.jpg" width="35" height="35" class="rounded-circle me-2"> El Taller del Sabor
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/menu.html">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/promociones.html">Promociones</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/pedidos.html">Pedido</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="btnModoOscuro" class="btn btn-outline-warning btn-sm mt-2 mt-lg-0">Modo Oscuro</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="hero-banner d-flex align-items-center" style="background-image: url('img/promociones/banner-principal.jpg');">
+    <div class="container text-center">
+      <div class="hero-overlay d-inline-block p-4">
+        <h1 class="display-4 fw-bold text-warning">El Taller del Sabor</h1>
+        <p class="lead text-white mb-4">Hamburguesas Artesanales de Verdad.<br>
+        Ingredientes frescos, carne 100% de res y recetas únicas.</p>
+        <a href="pages/menu.html" class="btn btn-warning btn-lg fw-bold px-4">Ver Nuestro Menú</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Especialidades -->
+  <main class="container my-5">
+    <h2 class="text-center mb-4 text-warning">Nuestras Especialidades</h2>
+
+    <div class="row g-4">
+      <!-- Hamburguesa 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-secondary">
+          <img src="img/productos/clasica-taller.jpg" class="card-img-top" alt="Hamburguesa Clasica">
+          <div class="card-body text-center">
+            <h3 class="h5 card-title">La Clásica Taller</h3>
+            <p class="card-text">Carne de res, queso cheddar, lechuga fresca, tomate y salsa de la casa.</p>
+            <a href="pages/menu.html" class="btn btn-outline-warning btn-sm">Ver en Menú</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hamburguesa 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-secondary">
+          <img src="img/productos/taller-bbq-bacon.jpg" class="card-img-top" alt="Hamburguesa BBQ Bacon">
+          <div class="card-body text-center">
+            <h3 class="h5 card-title">Taller BBQ Bacon</h3>
+            <p class="card-text">Doble tocineta crujiente, cebolla caramelizada, doble cheddar y salsa BBQ.</p>
+            <a href="pages/menu.html" class="btn btn-outline-warning btn-sm">Ver en Menú</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Requisito del proyecto (API - Carrusel) -->
+<div class="col-md-4">
+  <div class="card h-100 border-secondary">
+    <div class="card-header bg-warning text-dark text-center fw-bold">
+      Inspiracion del chef
+    </div>
+    <div class="card-body p-0">
+      <div id="carruselHamburguesas" class="carousel slide" data-bs-ride="carousel">
+        <div id="inner-carrusel" class="carousel-inner">
+          <!-- Aquí se inyectarán las slides con JS -->
+          <div class="carousel-item active p-4 text-center">
+            <p class="text-white">Cargando menú...</p>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselHamburguesas" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselHamburguesas" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+    <div class="card-footer text-center">
+      <button id="btn-actualizar-menu" class="btn btn-outline-warning btn-sm w-100">¡Recargar menú!</button>
+    </div>
+  </div>
+</div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

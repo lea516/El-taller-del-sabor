@@ -1,0 +1,74 @@
+/* Transicion suave para el modo oscuro */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Efecto hover desactivado para evitar que las imágenes se salgan del cuadro */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Sombras uniformes para las tarjetas y desbordamiento oculto */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+/* Alerta de domicilio cuando falta dinero */
+.alerta-domicilio-custom {
+  background-color: #2b2510;
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+
+/* Alerta de domicilio cuando es gratis */
+.alerta-domicilio-gratis {
+  background-color: #0f291e;
+  color: #25c974;
+  border: 1px solid #25c974;
+}
+
+/* Cursor de mano en botones y enlaces */
+button,
+.btn,
+.nav-link {
+  cursor: pointer;
+}
+
+/* Modo Oscuro global */
+.bg-dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Ajuste del logo */
+.navbar-brand img {
+    border: 1px solid #ffc107;
+}
+
+/* Estilo para el Hero Banner como fondo */
+.hero-banner {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Oscurece la imagen para que el texto resalte */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.img-bebida {
+  object-fit: contain;
+  background-color: #212529;
+}

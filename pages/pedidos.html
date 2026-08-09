@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Taller del Sabor - Pedidos</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body id="cuerpoPagina">
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="../index.html">El Taller del Sabor</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="promociones.html">Promociones</a></li>
+          <li class="nav-item"><a class="nav-link active" href="pedidos.html">Pedido</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="btnModoOscuro" class="btn btn-outline-warning btn-sm mt-2 mt-lg-0">Modo Oscuro</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header class="bg-dark text-white py-4 mb-4 border-bottom border-warning text-center">
+    <div class="container">
+      <h1 class="text-warning">Realiza tu Pedido</h1>
+      <p class="mb-0">Arma tu orden agregando uno o varios productos y calcula el total en tiempo real.</p>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="container my-4">
+    <div class="row g-4">
+      
+      <!-- Formulario de Pedido -->
+      <section class="col-lg-7">
+        <div class="card border-secondary p-4">
+          <form id="formPedido">
+            
+            <h2 class="h5 text-warning border-bottom border-secondary pb-2 mb-3">1. Información Personal</h2>
+            
+            <div class="mb-3">
+              <label for="nombreCliente" class="form-label fw-bold">Nombre completo *</label>
+              <input type="text" class="form-control" id="nombreCliente" placeholder="Ej. Andrés Pérez" required>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="telefonoCliente" class="form-label fw-bold">Teléfono / WhatsApp *</label>
+                <input type="tel" class="form-control" id="telefonoCliente" placeholder="Ej. 3001234567" required>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="direccionCliente" class="form-label fw-bold">Dirección de entrega *</label>
+                <input type="text" class="form-control" id="direccionCliente" placeholder="Ej. Calle 45 # 12-34" required>
+              </div>
+            </div>
+
+            <h2 class="h5 text-warning border-bottom border-secondary pb-2 my-3">2. Selección de Productos</h2>
+
+            <div class="row">
+              <div class="col-md-8 mb-3">
+                <label for="selectProducto" class="form-label fw-bold">Producto o Combo *</label>
+                <select class="form-select" id="selectProducto">
+                  <option value="" selected disabled>-- Selecciona un producto o combo --</option>
+                  
+                  <optgroup label="Hamburguesas (5)">
+                    <option value="18000">Hamburguesa Clásica - $18.000</option>
+                    <option value="24000">Taller BBQ Bacon - $24.000</option>
+                    <option value="21000">Crispy Chicken - $21.000</option>
+                    <option value="22000">Veggie Mushroom - $22.000</option>
+                    <option value="28000">La Brutal Taller - $28.000</option>
+                  </optgroup>
+
+                  <optgroup label="Acompañamientos (5)">
+                    <option value="12000">Papas Rústicas - $12.000</option>
+                    <option value="10000">Aros de Cebolla - $10.000</option>
+                    <option value="15000">Nachos Supremos - $15.000</option>
+                    <option value="14000">Papas Bacon & Cheese - $14.000</option>
+                    <option value="11000">Yucas Fritas - $11.000</option>
+                  </optgroup>
+
+                  <optgroup label="Bebidas y Postres (5)">
+                    <option value="5000">Gaseosa Personal - $5.000</option>
+                    <option value="8000">Limonada Cerezada - $8.000</option>
+                    <option value="10000">Cerveza Artesanal - $10.000</option>
+                    <option value="12000">Malteada de Chocolate - $12.000</option>
+                    <option value="11000">Brownie Supremo - $11.000</option>
+                  </optgroup>
+
+                  <optgroup label="Promociones Especiales">
+                    <option value="51200">Combo Pareja Taller - $51.200</option>
+                    <option value="72000">Combo Amigos 4x3 - $72.000</option>
+                    <option value="28000">Jueves Cervecero - $28.000</option>
+                    <option value="19500">Sweet Break Taller - $19.500</option>
+                    <option value="28000">Combo Express Chicken - $28.000</option>
+                    <option value="103500">Mega Family Pack - $103.500</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="col-md-4 mb-3">
+                <label for="cantidadProducto" class="form-label fw-bold">Cantidad *</label>
+                <input type="number" class="form-control" id="cantidadProducto" min="1" max="10" value="1">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <button type="button" id="btnAgregarItem" class="btn btn-outline-warning w-100 fw-bold">Agregar producto al pedido</button>
+            </div>
+
+            <div class="mb-3">
+              <label for="notasPedido" class="form-label fw-bold">Notas o especificaciones generales</label>
+              <textarea class="form-control" id="notasPedido" rows="2" placeholder="Ej. Enviar servilletas extra..."></textarea>
+            </div>
+
+            <h2 class="h5 text-warning border-bottom border-secondary pb-2 my-3">3. Forma de Pago</h2>
+
+            <div class="mb-4">
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="metodoPago" id="pagoEfectivo" value="Efectivo" checked>
+                <label class="form-check-label" for="pagoEfectivo">Efectivo contra entrega</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="metodoPago" id="pagoNequi" value="Nequi/Daviplata">
+                <label class="form-check-label" for="pagoNequi">Nequi / Daviplata / Transferencia</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="metodoPago" id="pagoTarjeta" value="Datáfono">
+                <label class="form-check-label" for="pagoTarjeta">Datáfono (Tarjeta débito/crédito)</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Panel Lateral: Resumen -->
+      <aside class="col-lg-5">
+        <div class="card bg-dark text-white border-warning p-4 sticky-top" style="top: 90px;">
+          <h2 class="h5 text-warning border-bottom border-secondary pb-2 mb-3">Resumen de la Orden</h2>
+          
+          <!-- Lista dinámica de productos agregados -->
+          <ul id="listaResumenItems" class="list-group list-group-flush bg-transparent mb-3" style="max-height: 180px; overflow-y: auto;">
+            <li class="list-group-item bg-dark text-muted small text-center border-secondary">No hay productos agregados aún.</li>
+          </ul>
+
+          <div class="d-flex justify-content-between mb-2">
+            <span>Subtotal:</span>
+            <span id="resumenSubtotal">$0</span>
+          </div>
+
+          <div class="d-flex justify-content-between mb-2">
+            <span>Domicilio:</span>
+            <span id="resumenDomicilio" class="fw-bold">$5.000</span>
+          </div>
+
+          <div id="alertaDomicilio" class="alert alerta-domicilio-custom py-1 px-2 my-2 text-center small" style="font-size: 0.85rem;">
+            Domicilio gratis por compras mayores a $30.000
+          </div>
+
+          <hr class="border-secondary my-2">
+
+          <div class="d-flex justify-content-between align-items-center my-2">
+            <span class="fw-bold fs-5">Total a pagar:</span>
+            <span id="resumenTotal" class="fs-4 fw-bold text-warning">$0</span>
+          </div>
+
+          <!-- Botón vinculado al formulario principal -->
+          <button type="submit" form="formPedido" class="btn btn-warning w-100 fw-bold mt-3">Confirmar y Enviar Pedido</button>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- Sección de Historial con LocalStorage -->
+    <section class="row mt-5">
+      <div class="col-12">
+        <div class="card border-warning bg-dark text-white p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 text-warning mb-0">Historial de Pedidos (LocalStorage)</h2>
+            <button id="btnLimpiarHistorial" class="btn btn-outline-danger btn-sm">Borrar Historial</button>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-dark table-striped table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>Cliente</th>
+                  <th>Teléfono</th>
+                  <th>Productos</th>
+                  <th>Notas</th>
+                  <th>Total</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody id="tablaHistorial">
+                <!-- Se llena dinámicamente con JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center py-3 mt-5 border-top border-warning">
+    <div class="container">
+      <p class="mb-0">El Taller del Sabor &copy; 2026 - Proyecto Front-End</p>
+    </div>
+  </footer>
+
+  <!-- Toast / Notificación para JS -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="toastNotificacion" class="toast align-items-center text-bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body fw-bold" id="mensajeToast">
+          ¡Pedido enviado con éxito!
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

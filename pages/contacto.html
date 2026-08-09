@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Taller del Sabor - Contacto</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body id="cuerpoPagina">
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="../index.html">El Taller del Sabor</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="promociones.html">Promociones</a></li>
+          <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedido</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="btnModoOscuro" class="btn btn-outline-warning btn-sm mt-2 mt-lg-0">Modo Oscuro</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header class="bg-dark text-white py-4 mb-4 border-bottom border-warning text-center">
+    <div class="container">
+      <h1 class="text-warning">Ponte en Contacto</h1>
+      <p class="mb-0">¿Tienes dudas o comentarios? Escríbenos o visítanos en nuestra sede.</p>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="container my-4">
+    <div class="row g-4">
+      
+      <!-- Formulario de Contacto -->
+      <section class="col-lg-7">
+        <div class="card border-secondary p-4">
+          <h2 class="h5 text-warning border-bottom border-secondary pb-2 mb-3">Envíanos un mensaje</h2>
+          
+          <form id="formContacto">
+            <div class="mb-3">
+              <label for="nombreContacto" class="form-label fw-bold">Nombre completo *</label>
+              <input type="text" class="form-control" id="nombreContacto" placeholder="Ej. Andres Hernandez" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="correoContacto" class="form-label fw-bold">Correo electrónico *</label>
+              <input type="email" class="form-control" id="correoContacto" placeholder="Ej. andres@email.com" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="asuntoContacto" class="form-label fw-bold">Asunto *</label>
+              <input type="text" class="form-control" id="asuntoContacto" placeholder="Ej. Reserva / Eventos / Comentario" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="mensajeContacto" class="form-label fw-bold">Mensaje *</label>
+              <textarea class="form-control" id="mensajeContacto" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-warning w-100 fw-bold">Enviar Mensaje</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Informacion de Ubicacion y Horarios -->
+      <aside class="col-lg-5">
+        <div class="card bg-dark text-white border-warning p-4 mb-4">
+          <h2 class="h5 text-warning border-bottom border-secondary pb-2 mb-3">Información del Restaurante</h2>
+          
+          <p class="mb-2"><strong>Dirección:</strong> Calle 52 # 69-48, Barrio El prado</p>
+          <p class="mb-2"><strong>Teléfono:</strong> 3016681518</p>
+          <p class="mb-2"><strong>Correo:</strong> ADMINTsabor@eltallerdelsabor.com</p>
+          
+          <hr class="border-secondary my-3">
+
+          <h3 class="h6 text-warning mb-2">Horarios de Atención:</h3>
+          <p class="mb-1"><strong>Lunes a Jueves:</strong> 12:00 PM - 10:00 PM</p>
+          <p class="mb-1"><strong>Viernes y Sábados:</strong> 12:00 PM - 11:30 PM</p>
+          <p class="mb-0"><strong>Domingos:</strong> 12:00 PM - 9:00 PM</p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center py-3 mt-5 border-top border-warning">
+    <div class="container">
+      <p class="mb-0">El Taller del Sabor &copy; 2026 - Proyecto Front-End</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
