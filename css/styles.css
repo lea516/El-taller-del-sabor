@@ -1,7 +1,107 @@
-/* Transicion suave para el modo oscuro */
+/* ==========================================
+   MODO OSCURO / MODO CLARO
+   ========================================== */
+
 body {
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: system-ui, -apple-system, sans-serif;
+    background-color: #ffffff;
+    color: #212529;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Elementos que deben cambiar en modo oscuro */
+body.modo-oscuro {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Tarjetas */
+body.modo-oscuro .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #444 !important;
+}
+
+/* Textos de las tarjetas */
+body.modo-oscuro .card-title,
+body.modo-oscuro .card-text {
+    color: #ffffff;
+}
+
+/* Encabezados */
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro h4,
+body.modo-oscuro h5,
+body.modo-oscuro h6 {
+    color: #ffffff;
+}
+
+/* Párrafos */
+body.modo-oscuro p {
+    color: #e0e0e0;
+}
+
+/* Formularios */
+body.modo-oscuro .form-control,
+body.modo-oscuro .form-select {
+    background-color: #212121;
+    color: #ffffff;
+    border-color: #555;
+}
+
+body.modo-oscuro .form-control::placeholder {
+    color: #aaa;
+}
+
+body.modo-oscuro .form-control:focus,
+body.modo-oscuro .form-select:focus {
+    background-color: #212121;
+    color: #ffffff;
+    border-color: #ffc107;
+}
+
+/* Listas */
+body.modo-oscuro .list-group-item {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #444;
+}
+
+/* Tablas */
+body.modo-oscuro table {
+    color: #ffffff;
+}
+
+body.modo-oscuro .table {
+    --bs-table-bg: #1e1e1e;
+    --bs-table-color: #ffffff;
+}
+
+/* Botón de modo */
+#btnModoOscuro {
+    transition: all 0.3s ease;
+}
+
+/* Carrusel */
+body.modo-oscuro .api-card {
+    background-color: #1e1e1e;
+}
+
+body.modo-oscuro .api-cargando {
+    color: #ffffff;
+}
+
+/* Transiciones */
+.card,
+.form-control,
+.form-select,
+.list-group-item,
+body {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 /* Efecto hover desactivado para evitar que las imágenes se salgan del cuadro */
@@ -71,4 +171,72 @@ button,
 .img-bebida {
   object-fit: contain;
   background-color: #212529;
+}
+
+/* ==========================================
+   TARJETA DEL CARRUSEL API
+   ========================================== */
+
+.api-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El carrusel ocupa todo el espacio disponible */
+.api-card #carruselHamburguesas {
+    flex: 1;
+    min-height: 0;
+}
+
+/* El contenedor interno ocupa toda la tarjeta */
+.api-card .carousel-inner {
+    height: 100%;
+}
+
+/* Cada slide ocupa todo el espacio */
+.api-card .carousel-item {
+    height: 100%;
+}
+
+/* Imagen */
+.api-imagen {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Nombre */
+.api-nombre {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    min-height: 40px;
+}
+
+/* Cargando */
+.api-cargando {
+    height: 100%;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Error */
+.api-error {
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #dc3545;
+    padding: 20px;
 }

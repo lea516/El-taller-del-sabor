@@ -30,7 +30,7 @@
           <li class="nav-item"><a class="nav-link" href="pages/pedidos.html">Pedido</a></li>
           <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
           <li class="nav-item ms-lg-2">
-            <button id="btnModoOscuro" class="btn btn-outline-warning btn-sm mt-2 mt-lg-0">Modo Oscuro</button>
+            <button id="btnModoOscuro" class="btn btn-outline-warning btn-sm mt-2 mt-lg-0">🌙 Modo oscuro</button>
           </li>
         </ul>
       </div>
@@ -38,7 +38,7 @@
   </nav>
 
   <!-- Hero Banner -->
-  <header class="hero-banner d-flex align-items-center" style="background-image: url('img/promociones/banner-principal.jpg');">
+  <header class="hero-banner d-flex align-items-center" style="background-image: url('img/promociones/banner-principal.webp');">
     <div class="container text-center">
       <div class="hero-overlay d-inline-block p-4">
         <h1 class="display-4 fw-bold text-warning">El Taller del Sabor</h1>
@@ -78,34 +78,52 @@
         </div>
       </div>
 
-      <!-- Requisito del proyecto (API - Carrusel) -->
+    <!-- API - Carrusel Inspiración del Chef -->
 <div class="col-md-4">
-  <div class="card h-100 border-secondary">
-    <div class="card-header bg-warning text-dark text-center fw-bold">
-      Inspiracion del chef
-    </div>
-    <div class="card-body p-0">
-      <div id="carruselHamburguesas" class="carousel slide" data-bs-ride="carousel">
-        <div id="inner-carrusel" class="carousel-inner">
-          <!-- Aquí se inyectarán las slides con JS -->
-          <div class="carousel-item active p-4 text-center">
-            <p class="text-white">Cargando menú...</p>
-          </div>
+    <div class="card h-100 border-secondary api-card">
+
+        <div class="card-header bg-warning text-dark text-center fw-bold">
+            Inspiración del chef
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carruselHamburguesas" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carruselHamburguesas" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
+
+        <div id="carruselHamburguesas" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+            <div id="inner-carrusel" class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="api-cargando">
+                        Cargando inspiración del chef...
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Flecha izquierda -->
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carruselHamburguesas"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <!-- Flecha derecha -->
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carruselHamburguesas"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
     </div>
-    <div class="card-footer text-center">
-      <button id="btn-actualizar-menu" class="btn btn-outline-warning btn-sm w-100">¡Recargar menú!</button>
-    </div>
-  </div>
 </div>
-    </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>

@@ -1,18 +1,59 @@
 document.addEventListener("DOMContentLoaded", function () {
   
   // 1. Modo Oscuro
-  const btnModoOscuro = document.getElementById("btnModoOscuro");
-  const cuerpoPagina = document.getElementById("cuerpoPagina");
+const btnModoOscuro = document.getElementById("btnModoOscuro");
+const cuerpoPagina = document.getElementById("cuerpoPagina");
 
-  if (btnModoOscuro && cuerpoPagina) {
+if (btnModoOscuro && cuerpoPagina) {
+
+    // Comprobar si había un modo guardado
+    const modoGuardado = localStorage.getItem("modoTaller");
+
+    if (modoGuardado === "oscuro") {
+        activarModoOscuro();
+    } else {
+        activarModoClaro();
+    }
+
+    // Cambiar modo al pulsar el botón
     btnModoOscuro.addEventListener("click", function () {
-      cuerpoPagina.classList.toggle("bg-dark");
-      cuerpoPagina.classList.toggle("text-white");
-      btnModoOscuro.textContent = cuerpoPagina.classList.contains("bg-dark") ? "Modo Claro" : "Modo Oscuro";
-      btnModoOscuro.classList.toggle("btn-warning");
-      btnModoOscuro.classList.toggle("btn-outline-warning");
+
+        if (cuerpoPagina.classList.contains("modo-oscuro")) {
+            activarModoClaro();
+        } else {
+            activarModoOscuro();
+        }
+
     });
-  }
+}
+
+
+// Activar modo oscuro
+function activarModoOscuro() {
+
+    cuerpoPagina.classList.add("modo-oscuro");
+
+    btnModoOscuro.innerHTML = "☀️ Modo claro";
+
+    btnModoOscuro.classList.remove("btn-outline-warning");
+    btnModoOscuro.classList.add("btn-warning");
+
+    localStorage.setItem("modoTaller", "oscuro");
+}
+
+
+// Activar modo claro
+function activarModoClaro() {
+
+    cuerpoPagina.classList.remove("modo-oscuro");
+
+    btnModoOscuro.innerHTML = "🌙 Modo oscuro";
+
+    btnModoOscuro.classList.remove("btn-warning");
+    btnModoOscuro.classList.add("btn-outline-warning");
+
+    localStorage.setItem("modoTaller", "claro");
+}
 
   // 2. Variables para la multicompra y calculadora
   const selectProducto = document.getElementById("selectProducto");
@@ -204,36 +245,103 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 6. Carrusel Creativo (API)
-  const btnActualizarMenu = document.getElementById("btn-actualizar-menu");
-  const innerCarrusel = document.getElementById("inner-carrusel");
+ // ==========================================
+// 6. CARRUSEL DE HAMBURGUESAS - API
+// ==========================================
 
-  if (btnActualizarMenu && innerCarrusel) {
-    const obtenerHamburguesasCreativas = () => {
-      const url = "https://www.themealdb.com/api/json/v1/1/search.php?s=burger";
-      innerCarrusel.innerHTML = '<div class="carousel-item active p-3 text-center text-white">Cargando...</div>';
-      
-      fetch(url)
-        .then(response => response.json())
-        .then(data => {
-          if (data.meals) {
-            innerCarrusel.innerHTML = "";
-            data.meals.slice(0, 5).forEach((hamburguesa, index) => {
-              const div = document.createElement("div");
-              div.className = `carousel-item ${index === 0 ? 'active' : ''}`;
-              div.innerHTML = `
-                <img src="${hamburguesa.strMealThumb}" class="d-block w-100" style="height: 200px; object-fit: cover;" alt="...">
-                <div class="bg-dark p-2 text-center text-white small fw-bold">${hamburguesa.strMeal}</div>
-              `;
-              innerCarrusel.appendChild(div);
-            });
-          }
+const innerCarrusel = document.getElementById("inner-carrusel");
+
+if (innerCarrusel) {
+
+    const url = "https://www.themealdb.com/api/json/v1/1/search.php?s=burger";
+
+    fetch(url)
+
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("Error al conectar con la API");
+            }
+
+            return response.json();
+
         })
+
+        .then(data => {
+
+            console.log("Datos recibidos de la API:", data);
+
+            if (!data.meals || data.meals.length === 0) {
+
+                innerCarrusel.innerHTML = `
+                    <div class="carousel-item active">
+                        <div class="api-error">
+                            No se encontraron hamburguesas.
+                        </div>
+                    </div>
+                `;
+
+                return;
+            }
+
+            // Limpiamos el mensaje "Cargando..."
+            innerCarrusel.innerHTML = "";
+
+            // Tomamos máximo 5 hamburguesas
+            const hamburguesas = data.meals.slice(0, 5);
+
+            hamburguesas.forEach((hamburguesa, index) => {
+
+                const slide = document.createElement("div");
+
+                slide.className =
+                    "carousel-item" +
+                    (index === 0 ? " active" : "");
+
+                slide.innerHTML = `
+
+                    <img
+                        src="${hamburguesa.strMealThumb}"
+                        class="api-imagen"
+                        alt="${hamburguesa.strMeal}"
+                    >
+
+                    <div class="api-nombre">
+                        ${hamburguesa.strMeal}
+                    </div>
+
+                `;
+
+                innerCarrusel.appendChild(slide);
+
+            });
+
+        })
+
         .catch(error => {
-          innerCarrusel.innerHTML = '<div class="carousel-item active p-3 text-danger text-center">Error al cargar.</div>';
+
+            console.error("ERROR DE LA API:", error);
+
+            innerCarrusel.innerHTML = `
+
+                <div class="carousel-item active">
+
+                    <div class="api-error">
+
+                        <strong>
+                            No se pudo cargar la API
+                        </strong>
+
+                        <br>
+
+                        Revisa la consola del navegador.
+
+                    </div>
+
+                </div>
+
+            `;
+
         });
-    };
-    obtenerHamburguesasCreativas();
-    btnActualizarMenu.addEventListener("click", obtenerHamburguesasCreativas);
-  }
-});
+
+}});
