@@ -1,6 +1,4 @@
-/* ==========================================
-   MODO OSCURO / MODO CLARO
-   ========================================== */
+/* MODO OSCURO / MODO CLARO */
 
 body {
     background-color: #ffffff;
@@ -106,9 +104,20 @@ body {
 
 /* Efecto hover desactivado para evitar que las imágenes se salgan del cuadro */
 .card-img-top {
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+main .card {
+    overflow: hidden;
+}
+
+main .card-img-top {
+    border-radius: 0;
 }
 
 /* Sombras uniformes para las tarjetas y desbordamiento oculto */
@@ -173,9 +182,7 @@ button,
   background-color: #212529;
 }
 
-/* ==========================================
-   TARJETA DEL CARRUSEL API
-   ========================================== */
+/* TARJETA DEL CARRUSEL API*/
 
 .api-card {
     overflow: hidden;

@@ -33,7 +33,7 @@ function activarModoOscuro() {
 
     cuerpoPagina.classList.add("modo-oscuro");
 
-    btnModoOscuro.innerHTML = "☀️ Modo claro";
+    btnModoOscuro.innerHTML = "Modo claro";
 
     btnModoOscuro.classList.remove("btn-outline-warning");
     btnModoOscuro.classList.add("btn-warning");
@@ -47,7 +47,7 @@ function activarModoClaro() {
 
     cuerpoPagina.classList.remove("modo-oscuro");
 
-    btnModoOscuro.innerHTML = "🌙 Modo oscuro";
+    btnModoOscuro.innerHTML = "Modo oscuro";
 
     btnModoOscuro.classList.remove("btn-warning");
     btnModoOscuro.classList.add("btn-outline-warning");
