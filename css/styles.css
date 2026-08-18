@@ -1,4 +1,6 @@
-/* MODO OSCURO / MODO CLARO */
+/* ==========================================
+   MODO OSCURO / MODO CLARO
+   ========================================== */
 
 body {
     background-color: #ffffff;
@@ -6,118 +8,308 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Elementos que deben cambiar en modo oscuro */
-body.modo-oscuro {
-    background-color: #121212;
-    color: #ffffff;
+body.oscuro {
+    background-color: #181818;
+    color: #f5f5f5;
+}
+
+/* Navbar y header */
+
+nav,
+header {
+    background-color: #212529 !important;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.oscuro nav,
+body.oscuro header {
+    background-color: #f5f5f5 !important;
+    box-shadow: 0 2px 5px #000;
+}
+
+/* Letras del header */
+
+body.oscuro header h1,
+body.oscuro header h2,
+body.oscuro header h3,
+body.oscuro header h4,
+body.oscuro header h5,
+body.oscuro header h6 {
+    color: #181818 !important;
+}
+
+body.oscuro header p {
+    color: #333333 !important;
+}
+
+body.oscuro header a {
+    color: #181818 !important;
+}
+
+body.oscuro header .text-white {
+    color: #181818 !important;
+}
+
+body.oscuro header .text-light {
+    color: #333333 !important;
+}
+
+/* Letras del navbar */
+
+body.oscuro nav .nav-link {
+    color: #181818 !important;
+}
+
+body.oscuro nav .nav-link:hover {
+    color: #b8860b !important;
+}
+
+body.oscuro nav .nav-link.active {
+    color: #b8860b !important;
+}
+
+body.oscuro nav .navbar-brand {
+    color: #b8860b !important;
+}
+
+body.oscuro nav .navbar-toggler {
+    border-color: #181818;
 }
 
 /* Tarjetas */
-body.modo-oscuro .card {
-    background-color: #1e1e1e;
-    color: #ffffff;
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+body.oscuro .card {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
     border-color: #444 !important;
+    box-shadow: 0 3px 10px #000;
+}
+
+/* Tarjetas que tienen bg-dark */
+
+body.oscuro .card.bg-dark {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
+    border-color: #ffc107 !important;
 }
 
 /* Textos de las tarjetas */
-body.modo-oscuro .card-title,
-body.modo-oscuro .card-text {
-    color: #ffffff;
+
+body.oscuro .card-title {
+    color: #ffffff !important;
 }
 
-/* Encabezados */
-body.modo-oscuro h1,
-body.modo-oscuro h2,
-body.modo-oscuro h3,
-body.modo-oscuro h4,
-body.modo-oscuro h5,
-body.modo-oscuro h6 {
-    color: #ffffff;
+body.oscuro .card-text {
+    color: #e0e0e0 !important;
 }
 
-/* Párrafos */
-body.modo-oscuro p {
+body.oscuro .card-body {
+    color: #f5f5f5 !important;
+}
+
+body.oscuro .card-body div {
+    color: #f5f5f5;
+}
+
+/* Texto dentro de tarjetas */
+
+body.oscuro .card p {
+    color: #e0e0e0 !important;
+}
+
+body.oscuro .card strong {
+    color: #ffffff !important;
+}
+
+/* Texto secundario */
+
+body.oscuro .text-muted {
+    color: #bdbdbd !important;
+}
+
+/* Texto oscuro */
+
+body.oscuro .text-dark {
+    color: #181818 !important;
+}
+
+/* Texto blanco */
+
+body.oscuro .text-white {
+    color: #f5f5f5 !important;
+}
+
+/* Lista de productos */
+
+.list-group-item.bg-dark.text-muted {
+    color: #6c757d !important;
+}
+
+body.oscuro .list-group-item.bg-dark.text-muted {
+    color: #bdbdbd !important;
+}
+
+/* Titulos */
+
+body.oscuro h1,
+body.oscuro h2,
+body.oscuro h3,
+body.oscuro h4,
+body.oscuro h5,
+body.oscuro h6 {
+    color: #f5f5f5;
+}
+
+/* Parrafos */
+
+body.oscuro p {
     color: #e0e0e0;
 }
 
 /* Formularios */
-body.modo-oscuro .form-control,
-body.modo-oscuro .form-select {
-    background-color: #212121;
+
+body.oscuro .form-control,
+body.oscuro .form-select {
+    background-color: #242424;
     color: #ffffff;
     border-color: #555;
 }
 
-body.modo-oscuro .form-control::placeholder {
+body.oscuro .form-control::placeholder {
     color: #aaa;
 }
 
-body.modo-oscuro .form-control:focus,
-body.modo-oscuro .form-select:focus {
-    background-color: #212121;
+body.oscuro .form-control:focus,
+body.oscuro .form-select:focus {
+    background-color: #242424;
     color: #ffffff;
     border-color: #ffc107;
 }
 
 /* Listas */
-body.modo-oscuro .list-group-item {
-    background-color: #1e1e1e;
+
+body.oscuro .list-group-item {
     color: #ffffff;
     border-color: #444;
 }
 
 /* Tablas */
-body.modo-oscuro table {
+
+body.oscuro table {
     color: #ffffff;
 }
 
-body.modo-oscuro .table {
-    --bs-table-bg: #1e1e1e;
+body.oscuro .table {
+    --bs-table-bg: #242424;
     --bs-table-color: #ffffff;
+    --bs-table-border-color: #444;
 }
 
-/* Botón de modo */
+/* Boton de modo */
+
 #btnModoOscuro {
     transition: all 0.3s ease;
 }
 
-/* Carrusel */
-body.modo-oscuro .api-card {
-    background-color: #1e1e1e;
+body.oscuro #btnModoOscuro {
+    background-color: #181818 !important;
+    color: #ffffff !important;
+    border-color: #181818 !important;
 }
 
-body.modo-oscuro .api-cargando {
+/* Botones de las tarjetas */
+
+body.oscuro .card .btn-warning {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #181818 !important;
+    font-weight: bold;
+}
+
+body.oscuro .card .btn-warning:hover {
+    background-color: #ffca2c !important;
+    border-color: #ffca2c !important;
+    color: #181818 !important;
+}
+
+/* Precios */
+
+body.oscuro .card .text-warning {
+    color: #ffc107 !important;
+}
+
+body.oscuro .card span.text-warning {
+    color: #ffd54f !important;
+}
+
+/* Precio anterior */
+
+body.oscuro .card small.text-muted {
+    color: #bdbdbd !important;
+}
+
+/* Etiquetas de promociones */
+
+body.oscuro .card .badge {
+    color: #ffffff;
+}
+
+body.oscuro .card .badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #181818 !important;
+}
+
+/* Bordes */
+
+body.oscuro .border-warning {
+    border-color: #ffc107 !important;
+}
+
+body.oscuro .border-secondary {
+    border-color: #555 !important;
+}
+
+/* API */
+
+body.oscuro .api-card {
+    background-color: #242424;
+}
+
+body.oscuro .api-cargando {
     color: #ffffff;
 }
 
 /* Transiciones */
+
+body,
+nav,
+header,
 .card,
 .form-control,
 .form-select,
-.list-group-item,
-body {
+.list-group-item {
     transition:
         background-color 0.3s ease,
         color 0.3s ease,
-        border-color 0.3s ease;
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-/* Efecto hover desactivado para evitar que las imágenes se salgan del cuadro */
+/* Imagenes de tarjetas */
+
 .card-img-top {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    padding: 0;
-    margin: 0;
-}
-main .card {
-    overflow: hidden;
-}
-
-main .card-img-top {
-    border-radius: 0;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
 }
 
 /* Sombras uniformes para las tarjetas y desbordamiento oculto */
@@ -126,39 +318,43 @@ main .card-img-top {
   transition: transform 0.2s;
 }
 
-/* Alerta de domicilio cuando falta dinero */
+/* Alertas de domicilio */
+
 .alerta-domicilio-custom {
-  background-color: #2b2510;
-  color: #ffc107;
-  border: 1px solid #ffc107;
+    background-color: #2b2510;
+    color: #ffc107;
+    border: 1px solid #ffc107;
 }
 
-/* Alerta de domicilio cuando es gratis */
 .alerta-domicilio-gratis {
-  background-color: #0f291e;
-  color: #25c974;
-  border: 1px solid #25c974;
+    background-color: #0f291e;
+    color: #25c974;
+    border: 1px solid #25c974;
 }
 
-/* Cursor de mano en botones y enlaces */
+/* Botones y enlaces */
+
 button,
 .btn,
 .nav-link {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-/* Modo Oscuro global */
+/* Fondo oscuro */
+
 .bg-dark-mode {
     background-color: #121212 !important;
     color: #ffffff !important;
 }
 
-/* Ajuste del logo */
+/* Logo */
+
 .navbar-brand img {
     border: 1px solid #ffc107;
 }
 
-/* Estilo para el Hero Banner como fondo */
+/* Hero */
+
 .hero-banner {
     background-size: cover;
     background-position: center;
@@ -169,7 +365,6 @@ button,
     justify-content: flex-start;
 }
 
-/* Oscurece la imagen para que el texto resalte */
 .hero-overlay {
     background: rgba(0, 0, 0, 0.6);
     padding: 2rem;
@@ -177,12 +372,16 @@ button,
     text-align: center;
 }
 
+/* Imagenes de bebidas */
+
 .img-bebida {
-  object-fit: contain;
-  background-color: #212529;
+    object-fit: contain;
+    background-color: #212529;
 }
 
-/* TARJETA DEL CARRUSEL API*/
+/* ==========================================
+   TARJETA DEL CARRUSEL API
+   ========================================== */
 
 .api-card {
     overflow: hidden;
@@ -190,23 +389,19 @@ button,
     flex-direction: column;
 }
 
-/* El carrusel ocupa todo el espacio disponible */
 .api-card #carruselHamburguesas {
     flex: 1;
     min-height: 0;
 }
 
-/* El contenedor interno ocupa toda la tarjeta */
 .api-card .carousel-inner {
     height: 100%;
 }
 
-/* Cada slide ocupa todo el espacio */
 .api-card .carousel-item {
     height: 100%;
 }
 
-/* Imagen */
 .api-imagen {
     width: 100%;
     height: 100%;
@@ -216,6 +411,7 @@ button,
 }
 
 /* Nombre */
+
 .api-nombre {
     background-color: #212529;
     color: white;
@@ -227,6 +423,7 @@ button,
 }
 
 /* Cargando */
+
 .api-cargando {
     height: 100%;
     min-height: 240px;
@@ -238,6 +435,7 @@ button,
 }
 
 /* Error */
+
 .api-error {
     min-height: 240px;
     display: flex;
